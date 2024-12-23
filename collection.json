@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "fe3dd059-c3d6-47ab-9c3a-056c89f02327",
+		"name": "Docker S-Run",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37678158"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Email",
+							"value": "Administrator@paa.com",
+							"description": "Your Email Address",
+							"type": "text"
+						},
+						{
+							"key": "Password",
+							"value": "...",
+							"description": "Your Password",
+							"type": "text"
+						},
+						{
+							"key": "Action",
+							"value": "Login",
+							"description": "Do Not Change",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:81/Account/LoginUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"Account",
+						"LoginUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetErrors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:81/api/api/GetExecutionIdsInError",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"api",
+						"GetExecutionIdsInError"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
